@@ -1,0 +1,130 @@
+<!DOCTYPE html> <!-- HTML5 Doctype Declaration -->
+
+<html lang="en"> <!-- Document language set to English -->
+
+<!-- =============================== -->
+<!-- ||      HEAD SECTION         || -->
+<!-- =============================== -->
+
+<head>
+  <!-- Character encoding -->
+  <meta charset="UTF-8">
+
+  <!-- Responsive design meta tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Metadata for SEO and authorship -->
+  <meta name="Author" content="Pradeen Krishna">
+  <meta name="Description" content="Tool Vault privacy policy">
+
+  <!-- Page title shown in browser tab -->
+  <title>Tool Vault</title>
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="/css/info.css">
+</head>
+
+<!-- =============================== -->
+<!-- ||         BODY START        || -->
+<!-- =============================== -->
+
+<body>
+
+  <!-- =============================== -->
+  <!-- ||         HEADER            || -->
+  <!-- =============================== -->
+  <header class="main-header">
+    <div class="container">
+      <div class="nav-wrapper">
+
+        <!-- Logo/Brand Name -->
+        <a href="/" aria-label="Go to homepage">
+          <h1 class="header-logo">ToolVault</h1>
+        </a>
+
+        <!-- Main navigation menu -->
+        <nav aria-label="Navigation Menu">
+          <ul class="header-nav-list-items">
+            <li><a href="/">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- =============================== -->
+  <!-- ||     MAIN CONTENT AREA     || -->
+  <!-- =============================== -->
+  <main>
+
+    <!-- Hero section displaying page title -->
+    <div class="container">
+      <section class="hero">
+        <h2 class="hero-h2" aria-labelledby="contact-form">Contact us</h2>
+      </section>
+    </div>
+
+    <!-- =============================== -->
+    <!-- ||       CONTACT FORM        || -->
+    <!-- =============================== -->
+    <div class="container">
+      <article class="main-article-contact" aria-labelledby="contact-form">
+
+        <form action="https://api.web3forms.com/submit" method="post" class="contact-form">
+
+          <!-- Name input field -->
+          <label for="userName">Name:</label>
+          <input type="text" name="userName" id="userName" placeholder="Enter your name" autofocus required>
+
+          <!-- Email input field -->
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" placeholder="Enter your email" required>
+
+          <!-- Message text area -->
+          <label for="message">Message:</label>
+          <textarea name="message" id="message" placeholder="We'd like to hear from you!" required></textarea>
+
+          <!-- Submit button -->
+          <button type="submit" class="contact-btn">Send</button>
+
+          <!-- Honeypot Spam Protection -->
+          <input type="checkbox" name="botcheck" style="display: none;">
+
+          <input type="hidden" name="access_key" value="5329ffdf-9cdb-456c-8e5a-b638c77341b0">
+
+        </form>
+
+      </article>
+    </div>
+
+  </main>
+
+  <!-- =============================== -->
+  <!-- ||          FOOTER           || -->
+  <!-- =============================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="nav-wrapper-for-footer">
+
+        <!-- Copyright -->
+        <p>&copy; 2025 ToolVault. All rights reserved</p>
+
+        <!-- Footer navigation -->
+        <nav aria-label="Footer Navigation Menu"> <!-- Additional footer links -->
+          <ul class="footer-nav-list-items">
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

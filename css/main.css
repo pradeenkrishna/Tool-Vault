@@ -1,0 +1,225 @@
+/* Import Google Font - Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* =============================== */
+/* ||       RESET STYLES        || */
+/* =============================== */
+/* Remove default margin, padding, and set border-box model for all elements */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =============================== */
+/* ||       CSS VARIABLES       || */
+/* =============================== */
+:root {
+  /* Font family */
+  --FF: 'Roboto', sans-serif;
+
+  /* Background and font colors */
+  --BODY-BGCOLOR: #F8F8FF;
+  --HEADER-FOOTER-BGCOLOR: #1D52DC;
+  --HEADER-FOOTER-FONT-COLOR: #F7F9FC;
+  --LINK-HOVER-COLOR: #dddddd;
+  --CATEGORY-BUTTON-BGCOLOR: linear-gradient(90deg, #4776e6 0%, #8e54e9 100%);
+  --CATEGORY-BUTTON-FONT-COLOR: #FFFFFF;
+  --CATEGORY-BUTTON-FONT-SIZE: 1.5rem;
+  --ITEM-BGCOLOR: #4BD05F;
+  --ITEM-FONT-COLOR: #000000;
+  --HEADING-FONT-COLOR: #000000;
+  --ACTIVE-LINK-COLOR: #66ffcc;
+}
+
+/* =============================== */
+/* ||      GENERAL STYLING      || */
+/* =============================== */
+
+/* Set background color for the page */
+html {
+  background-color: var(--BODY-BGCOLOR);
+}
+
+/* Apply font family and ensure minimum body height fills the viewport */
+body {
+  min-height: 100vh;
+  font-family: var(--FF);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Prevent text selection cursor on paragraphs and headers */
+p,
+h2 {
+  cursor: default;
+}
+
+/* Container for all main content with fixed max width and centered alignment */
+.container {
+  max-width: 1200px;
+  /* border: 2px solid magenta; */
+  /* Debug border (commented) */
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 0.6rem;
+}
+
+/* =============================== */
+/* ||        LINK STYLES        || */
+/* =============================== */
+
+/* Base style for all link elements */
+:any-link {
+  color: var(--HEADER-FOOTER-FONT-COLOR);
+  text-decoration: none;
+}
+
+/* Hover effect for links */
+a:hover {
+  color: var(--LINK-HOVER-COLOR);
+}
+
+/* Style for active links */
+a:active {
+  color: var(--ACTIVE-LINK-COLOR);
+}
+
+/* =============================== */
+/* ||       HEADER STYLING      || */
+/* =============================== */
+
+/* Sticky header that remains at the top during scroll */
+header {
+  height: 80px;
+  background-color: var(--HEADER-FOOTER-BGCOLOR);
+}
+
+/* Flex container to space out logo and navigation content within the header */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Logo style inside the header */
+.header-logo {
+  color: var(--HEADER-FOOTER-FONT-COLOR);
+  cursor: pointer;
+}
+
+/* Navigation menu inside header - horizontal list */
+.header-nav-list-items {
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+}
+
+/* =============================== */
+/* ||       HERO SECTION        || */
+/* =============================== */
+
+/* Offset top margin to avoid hiding behind fixed header */
+.hero {
+  margin-top: 80px;
+}
+
+/* Style for hero heading */
+.hero-h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 0.1em;
+  color: #343A40;
+}
+
+/* Subtext under hero heading */
+.hero-subtext {
+  display: flex;
+  font-size: 1.5rem;
+  padding: 0.5em;
+  justify-content: center;
+  color: #343A40;
+}
+
+/* =================================== */
+/* ||   SOFTWARE CATEGORY SECTION   || */
+/* =================================== */
+
+/* Category list container using grid */
+.category-list {
+  list-style: none;
+  margin-top: 90px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Style for each category button */
+.category-btn {
+  background: var(--CATEGORY-BUTTON-BGCOLOR);
+  color: var(--CATEGORY-BUTTON-FONT-COLOR);
+  font-size: var(--CATEGORY-BUTTON-FONT-SIZE);
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  padding: 0.6em;
+  border-radius: 40px;
+}
+
+/* =================================== */
+/* ||         QUOTE STYLING         || */
+/* =================================== */
+
+.quote {
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: .5em;
+}
+
+/* =============================== */
+/* ||      FOOTER STYLING       || */
+/* =============================== */
+
+/* Fixed footer aligned at the bottom of the page */
+.footer {
+  margin-top: auto;
+  height: 80px;
+  background-color: var(--HEADER-FOOTER-BGCOLOR);
+}
+
+/* Flexbox layout for footer content */
+.nav-wrapper-for-footer {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-around;
+  font-size: 1rem;
+}
+
+/* Navigation list items inside footer */
+.footer-nav-list-items {
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+}
+
+/* =============================== */
+/* ||     Privacy Statement     || */
+/* =============================== */
+
+.privacy-statement {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.2rem;
+  margin-top: 12px;
+  padding: 0.5rem;
+  justify-content: center;
+}

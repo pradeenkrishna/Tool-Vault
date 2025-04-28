@@ -1,0 +1,275 @@
+/* Import Google Font - Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* =============================== */
+/* ||       RESET STYLES        || */
+/* =============================== */
+/* Remove default margin, padding, and set border-box model for all elements */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =============================== */
+/* ||       CSS VARIABLES       || */
+/* =============================== */
+:root {
+  /* Font family */
+  --FF: 'Roboto', sans-serif;
+
+  /* Background and font colors */
+  --BODY-BGCOLOR: #F8F8FF;
+  --HEADER-FOOTER-BGCOLOR: #1D52DC;
+  --HEADER-FOOTER-FONT-COLOR: #F7F9FC;
+  --LINK-HOVER-COLOR: #dddddd;
+  --CATEGORY-BUTTON-BGCOLOR: linear-gradient(90deg, #4776e6 0%, #8e54e9 100%);
+  --CATEGORY-BUTTON-FONT-COLOR: #FFFFFF;
+  --CATEGORY-BUTTON-FONT-SIZE: 1.5rem;
+  --ITEM-BGCOLOR: #4BD05F;
+  --ITEM-FONT-COLOR: #000000;
+  --HEADING-FONT-COLOR: #000000;
+  --ACTIVE-LINK-COLOR: #66ffcc;
+}
+
+/* =============================== */
+/* ||      GENERAL STYLING      || */
+/* =============================== */
+
+/* Set background color for the page */
+html {
+  background-color: var(--BODY-BGCOLOR);
+}
+
+/* Apply font family and ensure minimum body height fills the viewport. Made body a flex container to keep the footer anchored at the bottom. */
+body {
+  min-height: 100vh;
+  font-family: var(--FF);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Prevent text selection cursor on paragraphs and headers */
+p,
+h2 {
+  cursor: default;
+}
+
+/* Container for all main content with fixed max width and centered alignment */
+.container {
+  max-width: 1200px;
+  /* border: 2px solid magenta; */
+  /* Debug border (commented) */
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 0.6rem;
+}
+
+/* =============================== */
+/* ||        LINK STYLES        || */
+/* =============================== */
+
+/* Base style for all link elements */
+:any-link {
+  color: var(--HEADER-FOOTER-FONT-COLOR);
+  text-decoration: none;
+}
+
+/* Hover effect for links */
+a:hover {
+  color: var(--LINK-HOVER-COLOR);
+}
+
+/* Style for active links */
+a:active {
+  color: var(--ACTIVE-LINK-COLOR);
+}
+
+/* =============================== */
+/* ||       HEADER STYLING      || */
+/* =============================== */
+
+/* Sticky header that remains at the top during scroll */
+.main-header {
+  height: 80px;
+  background-color: var(--HEADER-FOOTER-BGCOLOR);
+}
+
+/* Flex container to space out logo and navigation content within the header */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Logo style inside the header */
+.header-logo {
+  color: var(--HEADER-FOOTER-FONT-COLOR);
+  cursor: pointer;
+}
+
+/* Navigation menu inside header - horizontal list */
+.header-nav-list-items {
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+}
+
+/* =============================== */
+/* ||       HERO SECTION        || */
+/* =============================== */
+
+/* Offset top margin set to move hero section down */
+.hero {
+  margin-top: 50px;
+}
+
+/* Style for hero heading */
+.hero-h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 0.1em;
+  color: #343A40;
+}
+
+/* =============================== */
+/* ||     Privacy Statement     || */
+/* =============================== */
+
+/* Styling for privacy statement and terms & conditions sections with vertical spacing and larger font size */
+.privacy-statement,
+.terms-condition {
+  /*   border: solid 2px red; */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.2rem;
+  margin: 6px 0;
+  padding: 0.6em 0;
+}
+
+/* Adds a 100px margin at the bottom of the last element in the privacy statement and terms condition sections */
+.privacy-statement:last-child,
+.terms-condition:last-child {
+  margin-bottom: 110px;
+}
+
+/* =============================== */
+/* ||        About Page         || */
+/* =============================== */
+.about {
+  font-size: 1.2rem;
+  padding: 1.5em;
+  /* Increased padding for better spacing inside the box */
+  background-color: #f9f9f9;
+  /* Light background for the "card" effect */
+  border: 1px solid #e0e0e0;
+  /* Subtle border for definition */
+  border-radius: 8px;
+  /* Rounded corners for a modern look */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* Optional: subtle shadow for depth */
+  max-width: 800px;
+  /* Restrict width for better readability */
+  margin: 1rem auto;
+  /* Center the box with some vertical spacing */
+}
+
+/* =============================== */
+/* ||       CONTACT FORM        || */
+/* =============================== */
+
+
+/* Container for the contact form with centered layout and background */
+.main-article-contact {
+  background-color: var(--HEADER-FOOTER-BGCOLOR);
+  max-width: 600px;
+  margin: 50px auto 0;
+  /* Set top margin to 50px, left and right (auto), and set bottom margin to 0 */
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox layout for contact form fields */
+.contact-form {
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  font: 1.1rem;
+  padding: 25px;
+  gap: 12px;
+}
+
+/* Styling for input fields inside contact form */
+.contact-form :nth-child(2),
+.contact-form :nth-child(4) {
+  width: 50%;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+}
+
+/* Styling for textarea inside contact form */
+.contact-form :nth-child(6) {
+  height: 150px;
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+  max-width: 100%;
+}
+
+/* Styling for contact form submit button */
+.contact-btn {
+  color: whitesmoke;
+  background-color: #343D53;
+  font-size: 1rem;
+  width: 70px;
+  margin: 0 auto;
+  padding: 0.5em;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* Hover effect for contact button */
+.contact-btn:hover {
+  background-color: #242422;
+}
+
+/* Active (pressed) effect for contact button */
+.contact-btn:active {
+  background-color: #004494;
+  transform: translateY(0);
+}
+
+/* =============================== */
+/* ||      FOOTER STYLING       || */
+/* =============================== */
+
+/* Fixed footer aligned at the bottom of the page */
+.footer {
+  margin-top: auto;
+  height: 80px;
+  background-color: var(--HEADER-FOOTER-BGCOLOR);
+}
+
+/* Flexbox layout for footer content */
+.nav-wrapper-for-footer {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-around;
+  font-size: 1rem;
+}
+
+/* Navigation list items inside footer */
+.footer-nav-list-items {
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+}

@@ -1,0 +1,215 @@
+/* Import Google Font - Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* =============================== */
+/* ||       RESET STYLES        || */
+/* =============================== */
+/* Remove default margin, padding, and set border-box model for all elements */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =============================== */
+/* ||       CSS VARIABLES       || */
+/* =============================== */
+:root {
+  /* Font family */
+  --FF: 'Roboto', sans-serif;
+
+  /* Background and font colors */
+  --BODY-BGCOLOR: #F8F8FF;
+  --HEADER-FOOTER-BGCOLOR: #1D52DC;
+  --HEADER-FOOTER-FONT-COLOR: #F7F9FC;
+  --LINK-HOVER-COLOR: #dddddd;
+  --CATEGORY-BUTTON-BGCOLOR: linear-gradient(90deg, #4776e6 0%, #8e54e9 100%);
+  --CATEGORY-BUTTON-FONT-COLOR: #FFFFFF;
+  --CATEGORY-BUTTON-FONT-SIZE: 1.5rem;
+  --ITEM-BGCOLOR: #4BD05F;
+  --ITEM-FONT-COLOR: #000000;
+  --HEADING-FONT-COLOR: #000000;
+  --ACTIVE-LINK-COLOR: #66ffcc;
+}
+
+/* =============================== */
+/* ||      GENERAL STYLING      || */
+/* =============================== */
+
+/* Set background color for the page */
+html {
+  background-color: var(--BODY-BGCOLOR);
+}
+
+/* Apply font family and ensure minimum body height fills the viewport */
+body {
+  min-height: 100vh;
+  font-family: var(--FF);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Prevent text selection cursor on paragraphs and headers */
+p,
+h2 {
+  cursor: default;
+}
+
+/* Container for main content with fixed max width and centered alignment */
+.container {
+  max-width: 1200px;
+  /* border: 2px solid magenta; */
+  /* Debug border (commented) */
+  margin: 0 auto;
+  height: 100%;
+}
+
+/* =============================== */
+/* ||        LINK STYLES        || */
+/* =============================== */
+
+/* Base style for all link elements */
+:any-link {
+  color: var(--HEADER-FOOTER-FONT-COLOR);
+  text-decoration: none;
+}
+
+/* Hover effect for links */
+a:hover {
+  color: var(--LINK-HOVER-COLOR);
+}
+
+/* Style for active links */
+a:active {
+  color: var(--ACTIVE-LINK-COLOR);
+}
+
+/* =============================== */
+/* ||       HEADER STYLING      || */
+/* =============================== */
+
+/* Sticky header that remains at the top during scroll */
+header {
+  height: 80px;
+  background-color: var(--HEADER-FOOTER-BGCOLOR);
+}
+
+/* Flex container to space out nav content within the header */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Logo style inside the header */
+.header-logo {
+  color: var(--HEADER-FOOTER-FONT-COLOR);
+  cursor: pointer;
+}
+
+/* Navigation menu inside header - horizontal list */
+.header-nav-list-items {
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+}
+
+/* =============================== */
+/* ||       HERO SECTION        || */
+/* =============================== */
+
+/* Offset top margin to avoid hiding behind fixed header */
+.hero {
+  margin-top: 80px;
+}
+
+/* Style for hero heading */
+.hero-h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 0.1em;
+  color: #343A40;
+}
+
+/* ================================= */
+/* || SOFTWARE CATEGORIES SECTION || */
+/* ================================= */
+
+/* box-like article block with shadow and spacing */
+.article-box {
+  background-color: #4BD05F;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Tool info layout inside the article */
+.tool {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for image captions <h3> and <p> */
+figcaption {
+  padding-left: 0.8rem;
+  cursor: default;
+}
+
+/* Container for button actions aligned to the right side */
+.aside-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-right: 15px;
+}
+
+/* General button styles with transition for hover effects */
+.btn {
+  border: none;
+  font-weight: bold;
+  padding: 0.5em;
+  border-radius: 125px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Vertical separator used for dividing elements visually */
+.vertical-bar {
+  width: 1px;
+  height: 2em;
+  background-color: #000000;
+}
+
+/* =============================== */
+/* ||       FOOTER STYLING      || */
+/* =============================== */
+
+/* Fixed footer aligned at the bottom of the page */
+.footer {
+  margin-top: auto;
+  height: 80px;
+  background-color: var(--HEADER-FOOTER-BGCOLOR);
+}
+
+/* Flexbox layout for footer content */
+.nav-wrapper-for-footer {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-around;
+  font-size: 1rem;
+}
+
+/* Navigation list items inside footer */
+.footer-nav-list-items {
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+}
